@@ -3,10 +3,10 @@ public class Main {
         BankAccount account = new BankAccount("123456789", 100);
 
         try {
-            account.deposit(50);
+            account.deposit(100);
             System.out.println("Deposited $50. Current balance: $" + account.getBalance());
 
-            account.withdraw(200);
+            account.withdraw(300);
             System.out.println("Withdrew $200. Current balance: $" + account.getBalance());
 
         } catch (InvalidAmountException | InsufficientFundsException e) {
@@ -14,14 +14,14 @@ public class Main {
         }
 
         try {
-            account.withdraw(50);
+            account.withdraw(400);
             System.out.println("Withdrew $50. Current balance: $" + account.getBalance());
         } catch (InvalidAmountException | InsufficientFundsException e) {
             System.out.println(e.getMessage());
         }
 
         try {
-            account.deposit(-10);
+            account.deposit(-8);
         } catch (InvalidAmountException e) {
             System.out.println(e.getMessage());
         }
