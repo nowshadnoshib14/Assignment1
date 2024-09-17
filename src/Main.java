@@ -21,7 +21,7 @@ public class Main {
         }
 
         try {
-            account.deposit(-8);
+            account.deposit(-7);
         } catch (InvalidAmountException e) {
             System.out.println(e.getMessage());
         }
